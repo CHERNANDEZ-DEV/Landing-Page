@@ -1,0 +1,20 @@
+{
+  "name": "laboratorio-03",
+  "version": "1.0.0",
+  "description": "Laboratorio about Sass, Grid and Flexbox",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch  src/scss:build/css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Sass",
+    "Grid",
+    "Flexbox"
+  ],
+  "author": "CARLOS HERNANDEZ",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.66.1"
+  }
+}

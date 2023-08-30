@@ -1,0 +1,47 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+figure{
+    position: relative;
+
+    svg{
+        position: absolute;
+        top: -19rem;
+        height: 20rem;
+        width: auto;
+    }
+}
+
+.footer {
+    background-color: v.$grisOscuro;
+    padding-bottom: 1rem;
+}
+
+.contenedor-footer {
+    padding-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.FAQ-section{
+    margin: 0;
+    width: fit-content;
+    height: fit-content;
+    display: grid;
+    gap: 1rem;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+
+    p{
+        color: white;
+        margin: 0;
+    }
+}
+
+.copyright{
+    color: v.$blanco;
+    text-align: start;
+}

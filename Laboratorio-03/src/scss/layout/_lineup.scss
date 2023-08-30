@@ -1,0 +1,60 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+.lineup{
+    background-color: v.$rosa;
+    padding: 1.5rem 0;
+
+
+    h3, p {
+        text-align: center;
+        color: v.$blanco;
+    }
+
+    .dia{
+        text-transform: uppercase;
+        margin-bottom: 5rem;
+    }
+}
+
+.escenarios-contenedor {
+    @include m.tablet {
+
+        @include m.grid(3, 5rem)
+
+    }
+
+    p {
+        color: v.$negro;
+    }
+
+    .escenario {
+        padding: 2rem;
+        margin-bottom: 5rem;
+        border-radius: 3rem;
+        text-align: center;
+    }
+}
+
+.bg-amarillo {
+    background-color: #777777;
+    p{
+        color: white;
+    }
+
+    .precio{
+        font-weight: bold;
+    }
+}
+
+.bg-verde {
+    background-color: #CCCCCC;
+    padding-right: 1rem;
+    p{
+        color:black;
+    }
+}
+
+.nombre-escenario{
+    font-weight: 700;
+}
