@@ -17,6 +17,7 @@ html {
  */
 body {
   margin: 0;
+  padding: 0;
 }
 
 /**
@@ -126,10 +127,6 @@ sup {
 /**
  * Remove the border on images inside links in IE 10.
  */
-img {
-  border-style: none;
-}
-
 /* Forms
    ========================================================================== */
 /**
@@ -598,6 +595,252 @@ figure svg {
   display: block;
   position: absolute;
   left: -2rem;
+}
+
+.cards-section {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  padding: 3rem 0;
+}
+.cards-section .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.cards-section .cards .flip-card {
+  flex-shrink: 0;
+  width: 320px;
+  height: 504px;
+  padding: 2rem;
+  margin: 2rem;
+}
+.cards-section .cards .flip-card .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: all 550ms cubic-bezier(0.1, 0.22, 0.8, 1.13);
+  transform-style: preserve-3d;
+  border-radius: 15px;
+}
+.cards-section .cards .flip-card .flip-card-front, .cards-section .cards .flip-card .flip-card-back {
+  width: 100%;
+  height: 504px;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 15px;
+}
+.cards-section .cards .flip-card .flip-card-front {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.cards-section .cards .flip-card .flip-card-front img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  border-style: none;
+}
+.cards-section .cards .flip-card .flip-card-front h3 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4rem;
+  line-height: 45px;
+  background-color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #FFFFFF;
+}
+.cards-section .cards .flip-card .flip-card-back {
+  display: grid;
+  place-items: center;
+  background-color: #CCCCCC;
+  transform: rotateY(180deg);
+}
+.cards-section .cards .flip-card .flip-card-back p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  padding: 2rem;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  position: relative;
+  min-height: 100vh;
+  padding: 5rem;
+}
+.contact .contact-form {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  width: 90%;
+  height: 90%;
+  background: #F53756;
+  box-shadow: 1px 9px 20px -5px rgba(0, 0, 0, 0.59);
+  border-radius: 30px;
+}
+.contact .contact-form .form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 85%;
+  height: auto;
+  margin-left: 30px;
+}
+.contact .contact-form .form h2 {
+  color: #FFFFFF;
+}
+.contact .contact-form .form p {
+  color: #FFFFFF;
+}
+.contact .contact-form .form form {
+  width: 100%;
+  height: auto;
+}
+.contact .contact-form .form form .inputBox {
+  display: flex;
+  justify-content: auto;
+  align-items: auto;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.contact .contact-form .form form .inputBox label {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+.contact .contact-form .form form .inputBox textarea, .contact .contact-form .form form .inputBox input[type=text], .contact .contact-form .form form .inputBox input[type=email] {
+  border: none;
+  background: #f396a5;
+  padding: 10px;
+  border-radius: 15px;
+  color: #F53756;
+}
+.contact .contact-form .form form .inputBox textarea::placeholder, .contact .contact-form .form form .inputBox input[type=text]::placeholder, .contact .contact-form .form form .inputBox input[type=email]::placeholder {
+  color: #fac8d0;
+}
+.contact .contact-form .form form .inputBox textarea:focus, .contact .contact-form .form form .inputBox input[type=text]:focus, .contact .contact-form .form form .inputBox input[type=email]:focus {
+  outline: 2px solid #fac8d0;
+}
+.contact .contact-form .form form input[type=submit] {
+  background: #FFFFFF;
+  display: inline-block;
+  text-align: center;
+  width: 15rem;
+  height: auto;
+  padding: 10px;
+  border-radius: 15px;
+  color: #F53756;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 1px 9px 20px -5px rgba(0, 0, 0, 0.59);
+  transition: 0.3s;
+}
+.contact .contact-form .form form input[type=submit]:hover {
+  background: #f396a5;
+  color: #FFFFFF;
+}
+.contact .contact-form .contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contact .contact-form .contact-info .imgBox {
+  position: relative;
+  width: 80%;
+  height: 75%;
+}
+.contact .contact-form .contact-info .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.contact .contact-form .contact-info .textBox {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  width: 80%;
+  height: auto;
+  padding: 5rem 0 3rem 0;
+}
+.contact .contact-form .contact-info .textBox .infoContact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.contact .contact-form .contact-info .textBox .infoContact ion-icon {
+  font-size: 2em;
+  margin-right: 10px;
+  color: #FFFFFF;
+}
+.contact .contact-form .contact-info .textBox .infoContact p {
+  color: #FFFFFF;
+  font-size: small;
+}
+.contact .contact-form .contact-info .rrss {
+  display: flex;
+  justify-content: auto;
+  align-items: center;
+  flex-direction: row;
+}
+.contact .contact-form .contact-info .rrss a {
+  padding: 1.25rem;
+  font-size: 2em;
+  color: #FFFFFF;
+  transition: 0.3s;
+}
+.contact .contact-form .contact-info .rrss a:hover {
+  color: #f396a5;
+}
+
+@media (max-width: 1250px) {
+  .contact .contact-form {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    height: auto;
+  }
+  .contact .info .imgBox {
+    width: 100%;
+    height: auto;
+    display: none;
+  }
+  .contact .info .textBox {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 760px) {
+  .contact .contact-form {
+    display: block;
+    width: 100%;
+  }
+  .contact .contact-form .rrss a {
+    font-size: 1.5em;
+    color: #1766a3;
+    transition: 0.3s;
+  }
+}
+.flip-card-inner:hover {
+  transform: rotateY(-180deg);
 }
 
 /*# sourceMappingURL=app.css.map */

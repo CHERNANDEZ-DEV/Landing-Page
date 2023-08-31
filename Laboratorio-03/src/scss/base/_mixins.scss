@@ -35,3 +35,30 @@
     grid-template-columns: repeat($columnas, 1fr);
     gap: $espaciado;
 }
+
+@mixin card-img($width, $height){
+    width: $width;
+    height: $height;
+    border-radius: 15px;
+    object-fit: cover;
+    border-style: none;
+}
+
+@mixin card-transition($duration, $timing-function){
+    transition: all $duration $timing-function;
+    transform-style: preserve-3d;
+}
+
+@mixin dimensions($width:auto, $height:auto) {
+    width: $width;
+    height: $height;
+}
+
+@mixin flexbox( $justify:center, $align:center, $direction:row){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    
+}
+
