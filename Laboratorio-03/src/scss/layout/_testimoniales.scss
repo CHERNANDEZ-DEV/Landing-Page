@@ -1,15 +1,15 @@
 @use '../base/variables' as v;
 
-.testimoniales{
+.testimonials{
     margin-bottom: 5rem;
 }
 
 .testimonial{
 
-    background-color: v.$rosa;
+    background-color: v.$pink;
     font-size: 2.4rem;
     padding: 2rem;
-    color: white;
+    color: v.$light;
 
     blockquote {
         padding-left: 5rem;

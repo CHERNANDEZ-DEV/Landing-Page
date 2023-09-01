@@ -1,7 +1,7 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
 
-.inicio{
+.start{
 
     @include m.tablet{
         min-height: 70rem;
@@ -13,12 +13,12 @@
 }
 
 .header{
-    background-color: v.$grisOscuro;
+    background-color: v.$darkGrey;
     padding: 1rem 0 3rem 0;
 
 }
 
-.contenido-header{
+.content-header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -28,7 +28,7 @@
 
     h2{
         text-align: left;
-        color: v.$blanco;
+        color: v.$light;
         font-weight: lighter;
         line-height: 2;
     }

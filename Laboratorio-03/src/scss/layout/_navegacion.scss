@@ -1,12 +1,12 @@
 @use '../base/mixins' as m;
 @use '../base/variables' as v;
 
-.nombre-empresa{
-    color: v.$blanco;
+.name-company{
+    color: v.$light;
     font-weight: bold;
 }
 
-.barra {
+.bar {
     display: flex;
     flex-direction: column;
     
@@ -16,7 +16,7 @@
     }
 }
 
-.navegacion{
+.navigation{
 
     @include m.tablet{
         display: flex;
@@ -25,7 +25,7 @@
     }
 
     a {
-        color: v.$blanco;
+        color: v.$light;
         text-decoration: none;
         font-size: 2.2rem;
         display: block;
@@ -40,7 +40,7 @@
         }
 
         &:hover {
-            color: v.$rosa;
+            color: v.$pink;
         }
     }
 

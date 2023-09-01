@@ -324,7 +324,7 @@ p {
   font-size: 2rem;
 }
 
-.contenedor {
+.container {
   width: 95%;
   max-width: 180rem;
   margin: 0 auto;
@@ -363,7 +363,7 @@ h4 {
 }
 
 @media (min-width: 768px) {
-  .inicio {
+  .start {
     min-height: 70rem;
     background-image: url(../img/p3.webp);
     background-position: center center;
@@ -376,17 +376,17 @@ h4 {
   padding: 1rem 0 3rem 0;
 }
 
-.contenido-header {
+.content-header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 @media (min-width: 768px) {
-  .contenido-header {
+  .content-header {
     min-height: 70rem;
   }
 }
-.contenido-header h2 {
+.content-header h2 {
   text-align: left;
   color: #FFFFFF;
   font-weight: lighter;
@@ -425,7 +425,7 @@ figure svg {
   grid-template-rows: repeat(2, 1fr);
 }
 .FAQ-section p {
-  color: white;
+  color: #FFFFFF;
   margin: 0;
 }
 
@@ -434,29 +434,29 @@ figure svg {
   text-align: start;
 }
 
-.nombre-empresa {
+.name-company {
   color: #FFFFFF;
   font-weight: bold;
 }
 
-.barra {
+.bar {
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 768px) {
-  .barra {
+  .bar {
     flex-direction: row;
     justify-content: space-between;
   }
 }
 
 @media (min-width: 768px) {
-  .navegacion {
+  .navigation {
     display: flex;
     align-items: center;
   }
 }
-.navegacion a {
+.navigation a {
   color: #FFFFFF;
   text-decoration: none;
   font-size: 2.2rem;
@@ -464,15 +464,15 @@ figure svg {
   text-align: center;
 }
 @media (min-width: 768px) {
-  .navegacion a {
+  .navigation a {
     margin-right: 2.8rem;
     font-size: 2.4rem;
   }
-  .navegacion a:last-of-type {
+  .navigation a:last-of-type {
     margin-right: 0;
   }
 }
-.navegacion a:hover {
+.navigation a:hover {
   color: #F53756;
 }
 
@@ -484,83 +484,80 @@ figure svg {
   text-align: center;
   color: #FFFFFF;
 }
-.lineup .dia {
+.lineup .type-service {
   text-transform: uppercase;
   margin-bottom: 5rem;
 }
 
 @media (min-width: 768px) {
-  .escenarios-contenedor {
+  .services-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem;
   }
 }
-.escenarios-contenedor p {
+.services-container p {
   color: #000000;
 }
-.escenarios-contenedor .escenario {
+.services-container .service {
   padding: 2rem;
   margin-bottom: 5rem;
   border-radius: 3rem;
   text-align: center;
 }
 
-.bg-amarillo {
-  background-color: #777777;
+.bg-dark {
+  background-color: #333333;
 }
-.bg-amarillo p {
-  color: white;
-}
-.bg-amarillo .precio {
-  font-weight: bold;
+.bg-dark p {
+  color: #FFFFFF;
 }
 
-.bg-verde {
-  background-color: #CCCCCC;
+.bg-light {
+  background-color: #777777;
   padding-right: 1rem;
 }
-.bg-verde p {
-  color: black;
+.bg-light p {
+  color: #000000;
 }
 
-.nombre-escenario {
+.price-range {
   font-weight: 700;
 }
 
 @media (min-width: 768px) {
-  .seccion-inferior {
+  .section-inferior {
     display: grid;
     grid-template-columns: 2fr 1fr;
     column-gap: 2rem;
   }
 }
-.entrada-blog {
+.post-blog {
   margin-bottom: 2rem;
 }
 @media (min-width: 768px) {
-  .entrada-blog {
+  .post-blog {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 3rem;
   }
 }
 
-.texto-entrada a {
+.text-post a {
   color: #000000;
   margin-top: 2rem;
   display: block;
 }
 @media (min-width: 768px) {
-  .texto-entrada a {
+  .text-post a {
     margin-top: 0;
   }
 }
-.texto-entrada h4 {
+.text-post h4 {
   margin: 0;
   line-height: 1.4;
 }
-.texto-entrada h4::after {
+.text-post h4::after {
   content: "";
   display: block;
   width: 15rem;
@@ -568,11 +565,11 @@ figure svg {
   background-color: #F53756;
   margin-top: 1rem;
 }
-.texto-entrada span {
+.text-post span {
   color: #F53756;
 }
 
-.testimoniales {
+.testimonials {
   margin-bottom: 5rem;
 }
 
@@ -580,7 +577,7 @@ figure svg {
   background-color: #F53756;
   font-size: 2.4rem;
   padding: 2rem;
-  color: white;
+  color: #FFFFFF;
 }
 .testimonial blockquote {
   padding-left: 5rem;

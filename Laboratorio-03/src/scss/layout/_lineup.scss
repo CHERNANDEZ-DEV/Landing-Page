@@ -2,22 +2,22 @@
 @use '../base/variables' as v;
 
 .lineup{
-    background-color: v.$rosa;
+    background-color: v.$pink;
     padding: 1.5rem 0;
 
 
     h3, p {
         text-align: center;
-        color: v.$blanco;
+        color: v.$light;
     }
 
-    .dia{
+    .type-service{
         text-transform: uppercase;
         margin-bottom: 5rem;
     }
 }
 
-.escenarios-contenedor {
+.services-container {
     @include m.tablet {
 
         @include m.grid(3, 5rem)
@@ -25,10 +25,10 @@
     }
 
     p {
-        color: v.$negro;
+        color: v.$dark;
     }
 
-    .escenario {
+    .service {
         padding: 2rem;
         margin-bottom: 5rem;
         border-radius: 3rem;
@@ -36,25 +36,22 @@
     }
 }
 
-.bg-amarillo {
-    background-color: #777777;
+.bg-dark {
+    background-color: v.$darkGrey;
     p{
-        color: white;
+        color: v.$light;
     }
 
-    .precio{
-        font-weight: bold;
-    }
 }
 
-.bg-verde {
-    background-color: #CCCCCC;
+.bg-light {
+    background-color: v.$lightGrey;
     padding-right: 1rem;
     p{
-        color:black;
+        color: v.$dark;
     }
 }
 
-.nombre-escenario{
+.price-range{
     font-weight: 700;
 }

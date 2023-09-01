@@ -2,14 +2,14 @@
 @use '../base/variables' as v;
 
 @include m.tablet {
-    .seccion-inferior {
+    .section-inferior {
         display: grid;
         grid-template-columns: 2fr 1fr;
         column-gap: 2rem;
     }
 }
 
-.entrada-blog{
+.post-blog{
     margin-bottom: 2rem;
 
     @include m.tablet {
@@ -20,10 +20,10 @@
 
 }
 
-.texto-entrada {
+.text-post {
 
     a{
-        color: v.$negro;
+        color: v.$dark;
         margin-top: 2rem;
         display: block;
         @include m.tablet {
@@ -41,7 +41,7 @@
             display: block;
             width: 15rem;
             height: .5rem;
-            background-color: v.$rosa;
+            background-color: v.$pink;
             margin-top: 1rem;
         }
 
@@ -49,6 +49,6 @@
     }
 
     span {
-        color: v.$rosa;
+        color: v.$pink;
     }
 }
