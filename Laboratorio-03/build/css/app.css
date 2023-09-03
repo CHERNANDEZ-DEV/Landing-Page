@@ -309,7 +309,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -340,7 +342,9 @@ picture {
   display: block;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   text-align: center;
@@ -398,7 +402,7 @@ figure {
 }
 figure svg {
   position: absolute;
-  top: -19rem;
+  top: -16rem;
   height: 20rem;
   width: auto;
 }
@@ -408,11 +412,20 @@ figure svg {
   padding-bottom: 1rem;
 }
 
-.contenedor-footer {
-  padding-top: 5rem;
+.container-footer {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .container-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
 }
 
 .FAQ-section {
@@ -427,11 +440,6 @@ figure svg {
 .FAQ-section p {
   color: #FFFFFF;
   margin: 0;
-}
-
-.copyright {
-  color: #FFFFFF;
-  text-align: start;
 }
 
 .name-company {
@@ -480,7 +488,8 @@ figure svg {
   background-color: #F53756;
   padding: 1.5rem 0;
 }
-.lineup h3, .lineup p {
+.lineup h3,
+.lineup p {
   text-align: center;
   color: #FFFFFF;
 }
@@ -514,7 +523,7 @@ figure svg {
 }
 
 .bg-light {
-  background-color: #777777;
+  background-color: #CCCCCC;
   padding-right: 1rem;
 }
 .bg-light p {
@@ -526,14 +535,18 @@ figure svg {
 }
 
 @media (min-width: 768px) {
-  .section-inferior {
+  .lower-section {
     display: grid;
     grid-template-columns: 2fr 1fr;
     column-gap: 2rem;
   }
 }
+.lower-section {
+  column-gap: 2rem;
+}
+
 .post-blog {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 @media (min-width: 768px) {
   .post-blog {
@@ -597,8 +610,8 @@ figure svg {
 .cards-section {
   width: 100%;
   height: auto;
-  min-height: 100vh;
-  padding: 3rem 0;
+  padding-bottom: 5rem;
+  padding-top: 3rem;
 }
 .cards-section .cards {
   display: flex;
@@ -622,7 +635,8 @@ figure svg {
   transform-style: preserve-3d;
   border-radius: 15px;
 }
-.cards-section .cards .flip-card .flip-card-front, .cards-section .cards .flip-card .flip-card-back {
+.cards-section .cards .flip-card .flip-card-front,
+.cards-section .cards .flip-card .flip-card-back {
   width: 100%;
   height: 504px;
   position: absolute;
@@ -672,8 +686,7 @@ figure svg {
   width: 100%;
   height: auto;
   position: relative;
-  min-height: 100vh;
-  padding: 5rem;
+  padding-bottom: 10rem;
 }
 .contact .contact-form {
   position: relative;
@@ -687,7 +700,7 @@ figure svg {
   box-shadow: 1px 9px 20px -5px rgba(0, 0, 0, 0.59);
   border-radius: 30px;
 }
-.contact .contact-form .form {
+.contact .contact-form .container-form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -697,41 +710,47 @@ figure svg {
   height: auto;
   margin-left: 30px;
 }
-.contact .contact-form .form h2 {
+.contact .contact-form .container-form h2 {
   color: #FFFFFF;
 }
-.contact .contact-form .form p {
+.contact .contact-form .container-form p {
   color: #FFFFFF;
 }
-.contact .contact-form .form form {
+.contact .contact-form .container-form form {
   width: 100%;
   height: auto;
 }
-.contact .contact-form .form form .inputBox {
+.contact .contact-form .container-form form .inputBox {
   display: flex;
   justify-content: auto;
   align-items: auto;
   flex-direction: column;
   margin-bottom: 15px;
 }
-.contact .contact-form .form form .inputBox label {
+.contact .contact-form .container-form form .inputBox label {
   color: #FFFFFF;
   font-weight: 700;
 }
-.contact .contact-form .form form .inputBox textarea, .contact .contact-form .form form .inputBox input[type=text], .contact .contact-form .form form .inputBox input[type=email] {
+.contact .contact-form .container-form form .inputBox textarea,
+.contact .contact-form .container-form form .inputBox input[type=text],
+.contact .contact-form .container-form form .inputBox input[type=email] {
   border: none;
   background: #f396a5;
   padding: 10px;
   border-radius: 15px;
   color: #F53756;
 }
-.contact .contact-form .form form .inputBox textarea::placeholder, .contact .contact-form .form form .inputBox input[type=text]::placeholder, .contact .contact-form .form form .inputBox input[type=email]::placeholder {
+.contact .contact-form .container-form form .inputBox textarea::placeholder,
+.contact .contact-form .container-form form .inputBox input[type=text]::placeholder,
+.contact .contact-form .container-form form .inputBox input[type=email]::placeholder {
   color: #fac8d0;
 }
-.contact .contact-form .form form .inputBox textarea:focus, .contact .contact-form .form form .inputBox input[type=text]:focus, .contact .contact-form .form form .inputBox input[type=email]:focus {
+.contact .contact-form .container-form form .inputBox textarea:focus,
+.contact .contact-form .container-form form .inputBox input[type=text]:focus,
+.contact .contact-form .container-form form .inputBox input[type=email]:focus {
   outline: 2px solid #fac8d0;
 }
-.contact .contact-form .form form input[type=submit] {
+.contact .contact-form .container-form form input[type=submit] {
   background: #FFFFFF;
   display: inline-block;
   text-align: center;
@@ -746,8 +765,8 @@ figure svg {
   box-shadow: 1px 9px 20px -5px rgba(0, 0, 0, 0.59);
   transition: 0.3s;
 }
-.contact .contact-form .form form input[type=submit]:hover {
-  background: #f396a5;
+.contact .contact-form .container-form form input[type=submit]:hover {
+  background: #fac8d0;
   color: #FFFFFF;
 }
 .contact .contact-form .contact-info {
@@ -806,7 +825,7 @@ figure svg {
   transition: 0.3s;
 }
 .contact .contact-form .contact-info .rrss a:hover {
-  color: #f396a5;
+  color: #fac8d0;
 }
 
 @media (max-width: 1250px) {
@@ -829,6 +848,7 @@ figure svg {
   .contact .contact-form {
     display: block;
     width: 100%;
+    margin: 1.8rem;
   }
   .contact .contact-form .rrss a {
     font-size: 1.5em;

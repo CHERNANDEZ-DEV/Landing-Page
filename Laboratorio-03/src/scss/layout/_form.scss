@@ -2,107 +2,99 @@
 @use '../base/mixins' as m;
 
 
-.contact{
+.contact {
     @include m.flexbox(center, center);
     @include m.dimensions(100%);
     position: relative;
-    min-height: 100vh;
-    padding: 5rem;
- 
- 
-    .contact-form{
+    padding-bottom: 10rem;
+
+    .contact-form {
         position: relative;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr ));
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
         gap: 20px;
-        padding: 40px; 
+        padding: 40px;
         @include m.dimensions(90%, 90%);
-        background: v.$rosa;
-        box-shadow:  1px 9px 20px -5px rgba(0,0,0,.59);
+        background: v.$pink;
+        box-shadow: 1px 9px 20px -5px rgba(0, 0, 0, .59);
         border-radius: 30px;
-       
-        .form{
-            @include m.flexbox(center, center,column);
+
+        .container-form {
+            @include m.flexbox(center, center, column);
             position: relative;
             @include m.dimensions(85%);
-            margin-left: 30px ;
- 
-            h2{
-                color: v.$blanco;
-            }
-            p{
-                color: v.$blanco;
-            }
- 
-            form{
-                @include m.dimensions(100%);
- 
+            margin-left: 30px;
 
-                .inputBox{
-                    @include m.flexbox(auto, auto,column);
+            h2 {
+                color: v.$light;
+            }
+
+            p {
+                color: v.$light;
+            }
+
+            form {
+                @include m.dimensions(100%);
+
+                .inputBox {
+                    @include m.flexbox(auto, auto, column);
                     margin-bottom: 15px;
- 
- 
-                    label{
-                        color: v.$blanco;
+                    label {
+                        color: v.$light;
                         font-weight: 700;
                     }
- 
- 
-                    textarea, input[type="text"], input[type="email"]{
+
+                    textarea,
+                    input[type="text"],
+                    input[type="email"] {
                         border: none;
-                        background: v.$rosaSuave;
+                        background: v.$lightPink;
                         padding: 10px;
                         border-radius: v.$border-radius;
-                        color: v.$rosa;
+                        color: v.$pink;
 
-                        &::placeholder{
-                            color: v.$rosaBlanco;
+                        &::placeholder {
+                            color: v.$whitePink;
                         }
                     }
- 
- 
-                    textarea:focus, input[type="text"]:focus, input[type="email"]:focus{
-                        outline: 2px solid v.$rosaBlanco;
+
+                    textarea:focus,
+                    input[type="text"]:focus,
+                    input[type="email"]:focus {
+                        outline: 2px solid v.$whitePink;
                     }
                 }
- 
- 
-                input[type="submit"]{
-                    background: v.$blanco;
+
+                input[type="submit"] {
+                    background: v.$light;
                     display: inline-block;
                     text-align: center;
                     @include m.dimensions(15rem);
                     padding: 10px;
                     border-radius: v.$border-radius;
-                    color: v.$rosa;
+                    color: v.$pink;
                     letter-spacing: 1px;
                     border: none;
                     cursor: pointer;
-                    box-shadow:  1px 9px 20px -5px rgba(0,0,0,.59);
+                    box-shadow: 1px 9px 20px -5px rgba(0, 0, 0, .59);
                     transition: 0.3s;
- 
- 
+
+
                 }
- 
- 
-                input[type="submit"]:hover{
-                    background: v.$rosaSuave;
-                    color: v.$blanco;
+
+                input[type="submit"]:hover {
+                    background: v.$whitePink;
+                    color: v.$light;
                 }
             }
         }
- 
- 
-        .contact-info{
-            @include m.flexbox(center, center,column);
- 
-            .imgBox{
+
+        .contact-info {
+            @include m.flexbox(center, center, column);
+            .imgBox {
                 position: relative;
-                @include m.dimensions(80%, 75%); 
- 
- 
-                img{
+                @include m.dimensions(80%, 75%);
+                img {
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -110,99 +102,79 @@
                     object-fit: cover;
                 }
             }
- 
- 
-            .textBox{
-                @include m.flexbox(center, start,column);
+
+            .textBox {
+                @include m.flexbox(center, start, column);
                 @include m.dimensions(80%);
                 padding: 5rem 0 3rem 0;
-             
-                .infoContact{
-                    @include m.flexbox(center, center,row);
-                   
- 
-                    ion-icon{
+
+                .infoContact {
+                    @include m.flexbox(center, center, row);
+                    ion-icon {
                         font-size: 2em;
                         margin-right: 10px;
-                        color: v.$blanco;
+                        color: v.$light;
                     }
-                    p{
-                        color: v.$blanco;
+
+                    p {
+                        color: v.$light;
                         font-size: small;
                     }
                 }
- 
- 
             }
- 
- 
+
             .rrss {
-                @include m.flexbox(auto, center,row);
-               
-                a{
+                @include m.flexbox(auto, center, row);
+
+                a {
                     padding: 1.25rem;
                     font-size: 2em;
-                    color: v.$blanco;
+                    color: v.$light;
                     transition: 0.3s;
-                   
+
                 }
-                a:hover{
-                   color: v.$rosaSuave;
+
+                a:hover {
+                    color: v.$whitePink;
                 }
             }
- 
- 
-       
         }
- 
- 
     }
+}
 
- }
-
- 
-
-
-
- 
- @media (max-width: 1250px) {
- 
- 
-    .contact .contact-form {
-      grid-template-columns: 1fr;
-      padding: 20px;
-      height: auto;
-    }
-     .contact .info .imgBox {
-      width: 100%;
-      height: auto;
-      display: none;
-    }
-     .contact .info .textBox {
-      width: 100%;
-      margin-top: 20px;
-     
-    }
- }
- 
- 
- 
- 
- @media (max-width: 760px) { 
+@media (max-width: 1250px) {
 
     .contact .contact-form {
-        display: block; 
+        grid-template-columns: 1fr;
+        padding: 20px;
+        height: auto;
+    }
+
+    .contact .info .imgBox {
         width: 100%;
+        height: auto;
+        display: none;
+    }
+
+    .contact .info .textBox {
+        width: 100%;
+        margin-top: 20px;
 
     }
- 
- 
+}
+
+@media (max-width: 760px) {
+
+    .contact .contact-form {
+        display: block;
+        width: 100%;
+        margin: 1.8rem;
+
+    }
+
     .contact .contact-form .rrss a {
         font-size: 1.5em;
         color: #1766a3;
         transition: 0.3s;
     }
- 
- 
- }
- 
+}

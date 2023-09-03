@@ -1,64 +1,39 @@
  @use '../base/variables' as v;
 
-@mixin telefono {
-    @media(min-width: v.$telefono){
-        @content;
-    }
-}
+ @mixin tablet {
+     @media (min-width: v.$tablet) {
+         @content;
+     }
+ }
 
-@mixin tablet {
-    @media (min-width: v.$tablet){
-        @content;
-    }
-}
+ @mixin grid($columnas, $espaciado) {
+     display: grid;
+     grid-template-columns: repeat($columnas, 1fr);
+     gap: $espaciado;
+ }
 
-@mixin desktop {
-    @media (min-width: v.$desktop){
-        @content;
-    }
-}
+ @mixin card-img($width, $height) {
+     width: $width;
+     height: $height;
+     border-radius: 15px;
+     object-fit: cover;
+     border-style: none;
+ }
 
-//mixins con parametros
-@mixin heading($color: blue, $border-radius: false) {
-    text-transform: uppercase;
-    font-size: 2.4rem;
-    color: $color;
-    background-color: black;
+ @mixin card-transition($duration, $timing-function) {
+     transition: all $duration $timing-function;
+     transform-style: preserve-3d;
+ }
 
-    @if $border-radius {
-        border-radius: 1rem;
-    }
-} 
+ @mixin dimensions($width: auto, $height: auto) {
+     width: $width;
+     height: $height;
+ }
 
-@mixin grid($columnas, $espaciado) {
-    display: grid;
-    grid-template-columns: repeat($columnas, 1fr);
-    gap: $espaciado;
-}
+ @mixin flexbox($justify: center, $align: center, $direction: row) {
+     display: flex;
+     justify-content: $justify;
+     align-items: $align;
+     flex-direction: $direction;
 
-@mixin card-img($width, $height){
-    width: $width;
-    height: $height;
-    border-radius: 15px;
-    object-fit: cover;
-    border-style: none;
-}
-
-@mixin card-transition($duration, $timing-function){
-    transition: all $duration $timing-function;
-    transform-style: preserve-3d;
-}
-
-@mixin dimensions($width:auto, $height:auto) {
-    width: $width;
-    height: $height;
-}
-
-@mixin flexbox( $justify:center, $align:center, $direction:row){
-    display: flex;
-    justify-content: $justify;
-    align-items: $align;
-    flex-direction: $direction;
-    
-}
-
+ }

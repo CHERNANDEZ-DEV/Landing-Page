@@ -1,17 +1,17 @@
 @use '../base/mixins' as m;
 @use '../base/variables' as v;
 
-.lineup{
+.lineup {
     background-color: v.$pink;
     padding: 1.5rem 0;
 
-
-    h3, p {
+    h3,
+    p {
         text-align: center;
         color: v.$light;
     }
 
-    .type-service{
+    .type-service {
         text-transform: uppercase;
         margin-bottom: 5rem;
     }
@@ -21,7 +21,6 @@
     @include m.tablet {
 
         @include m.grid(3, 5rem)
-
     }
 
     p {
@@ -38,20 +37,21 @@
 
 .bg-dark {
     background-color: v.$darkGrey;
-    p{
+
+    p {
         color: v.$light;
     }
-
 }
 
 .bg-light {
     background-color: v.$lightGrey;
     padding-right: 1rem;
-    p{
+
+    p {
         color: v.$dark;
     }
 }
 
-.price-range{
+.price-range {
     font-weight: 700;
 }
